@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            🎱 BILLAR EL TRIUNFO
+        </div>
+
+        <nav>
+
+            <a href="index.html">Inicio</a>
+
+            <a href="mesas.html">Mesas</a>
+
+            <a href="clientes.html" class="activo">Clientes</a>
+
+            <a href="productos.html">Productos</a>
+
+            <a href="reservas.html">Reservas</a>
+
+            <a href="dashboard.html">Dashboard</a>
+
+        </nav>
+
+    </header>
+    <main class="contenedor seccion">
+
+
+        <h1 class="titulo">
+            👥 ADMINISTRACIÓN DE CLIENTES
+        </h1>
+
+        <p>
+            Registra, consulta y administra los clientes
+            que visitan BILLAR EL TRIUNFO.
+        </p>
+        <section class="seccion">
+
+            <div class="kpi-grid">
+
+                <div class="kpi">
+
+                    <h3>👥 Total de clientes</h3>
+
+                    <p id="total-clientes">0</p>
+
+                </div>
+
+                <div class="kpi">
+
+                    <h3>📋 Clientes registrados</h3>
+
+                    <p id="clientes-registrados">0</p>
+
+                </div>
+
+            </div>
+
+        </section>
+        <section class="seccion">
+
+            <h2 class="titulo">
+                REGISTRAR NUEVO CLIENTE
+            </h2>
+
+            <form id="form-cliente" class="formulario">
+
+                <label for="nombre">
+                    Nombre completo:
+                </label>
+
+                <input
+                    type="text"
+                    id="nombre"
+                    placeholder="Ingrese nombre completo"
+                    maxlength="80"
+                    required
+                >
+
+
+                <label for="celular">
+                    Número de celular:
+                </label>
+
+                <input
+                    type="tel"
+                    id="celular"
+                    placeholder="Ejemplo: 70012345"
+                    pattern="[0-9]{7,15}"
+                    required
+                >
+
+
+                <label for="correo">
+                    Correo electrónico:
+                </label>
+
+                <input
+                    type="email"
+                    id="correo"
+                    placeholder="ejemplo@gmail.com"
+                >
+                <label for="direccion">
+                    Dirección:
+                </label>
+
+                <input
+                    type="text"
+                    id="direccion"
+                    placeholder="Ingrese dirección"
+                >
+
+
+                <button type="submit" class="btn">
+                    ➕ Registrar cliente
+                </button>
+
+                <p id="mensaje-cliente" class="mensaje oculto"></p>
+
+            </form>
+
+        </section>
+        <section class="seccion">
+
+            <h2 class="titulo">
+                LISTA DE CLIENTES
+            </h2>
+
+            <input
+                type="search"
+                id="buscar-cliente"
+                placeholder="🔍 Buscar cliente por nombre o celular..."
+            >
+
+            <div class="tabla-contenedor">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>ID</th>
+
+                            <th>Nombre completo</th>
+
+                            <th>Celular</th>
+
+                            <th>Correo</th>
+
+                            <th>Dirección</th>
+
+                            <th>Acciones</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="lista-clientes">
+
+                        <tr>
+                            <td colspan="6">
+                                Cargando clientes...
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+        <section class="seccion">
+
+            <div class="card">
+
+                <h3>📌 Información del módulo</h3>
+
+                <br>
+
+                <p>
+                    Este módulo permite mantener un registro
+                    organizado de los clientes del establecimiento.
+                </p>
+
+                <br>
+
+                <p>
+                    Los registros se almacenan en el navegador
+                    mediante localStorage.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+  <footer class="footer">
+    <p>© 2026 BILLAR EL TRIUNFO | Oruro - Bolivia</p>
+</footer>
+    <script src="app.js"></script>
+    <script src="clientes.js"></script>
+</body>
+</html>

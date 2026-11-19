@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sistema de administración Billar El Triunfo">
+    <title>Inicio | Billar El Triunfo</title>
+    <link rel="stylesheet" href="estilos.css">
+
+    <style>
+        .inicio-banner {
+            width: min(1100px, 92%);
+            margin: 35px auto;
+            padding: 65px 25px;
+            text-align: center;
+            background: linear-gradient(135deg, #174b36, #0b241a);
+            border: 2px solid #d6ad55;
+            border-radius: 15px;
+        }
+
+        .inicio-banner .etiqueta {
+            display: inline-block;
+            color: #f4d58b;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .inicio-banner h1 {
+            color: #d6ad55;
+            font-family: Georgia, serif;
+            font-size: clamp(30px, 5vw, 48px);
+            margin-bottom: 18px;
+        }
+
+        .inicio-banner p {
+            color: #ffffff;
+            margin: 10px 0;
+            line-height: 1.7;
+        }
+
+        .inicio-banner .btn {
+            margin: 12px 6px 0;
+        }
+
+        .inicio-panel {
+            width: min(1100px, 92%);
+            margin: 45px auto;
+        }
+
+        .inicio-panel .titulo {
+            text-align: center;
+            color: #d6ad55;
+            font-family: Georgia, serif;
+            font-size: 29px;
+            margin-bottom: 12px;
+        }
+
+        .inicio-descripcion {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #f5f5ed;
+        }
+
+        .inicio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px;
+            align-items: stretch;
+        }
+
+        .inicio-cuadro {
+            min-width: 0;
+            min-height: 245px;
+            padding: 28px 22px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(145deg, #1d4934, #102c20);
+            border: 1px solid #bd984e;
+            border-top: 5px solid #d6ad55;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .inicio-cuadro:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
+        }
+
+        .inicio-icono {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .inicio-cuadro h3 {
+            color: #e4bd70;
+            font-family: Georgia, serif;
+            font-size: 19px;
+            margin-bottom: 12px;
+        }
+
+        .inicio-cuadro p {
+            color: #f5f5ed;
+            font-size: 14px;
+            line-height: 1.6;
+            min-height: 45px;
+            margin-bottom: 20px;
+        }
+
+        .inicio-cuadro .btn {
+            min-width: 135px;
+            margin-top: auto;
+        }
+
+        .inicio-informacion {
+            width: min(900px, 100%);
+            margin: 45px auto;
+            padding: 30px;
+            background: #19382b;
+            border: 1px solid #d6ad55;
+            border-radius: 12px;
+        }
+
+        .inicio-informacion h2 {
+            text-align: center;
+            color: #e4bd70;
+            margin-bottom: 22px;
+        }
+
+        .inicio-informacion p {
+            padding: 12px;
+            margin: 7px 0;
+            background: #102c20;
+            border-radius: 6px;
+            line-height: 1.5;
+        }
+
+        .inicio-informacion strong {
+            color: #f4d58b;
+        }
+
+        .inicio-despedida {
+            width: min(900px, 92%);
+            margin: 35px auto;
+            padding: 35px 20px;
+            text-align: center;
+            background: #19382b;
+            border: 1px solid #d6ad55;
+            border-radius: 12px;
+        }
+
+        .inicio-despedida h2 {
+            color: #e4bd70;
+            margin-bottom: 15px;
+        }
+
+        .inicio-despedida p {
+            margin-bottom: 20px;
+        }
+
+        .inicio-footer {
+            padding: 30px 15px;
+            text-align: center;
+            background: #123d2d;
+            border-top: 4px solid #d6ad55;
+            color: #f5f5ed;
+        }
+
+        .inicio-footer h3 {
+            color: #f4d58b;
+            margin-bottom: 10px;
+        }
+
+        .inicio-footer p {
+            margin: 7px 0;
+        }
+
+        @media (max-width: 850px) {
+            .inicio-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 550px) {
+            .inicio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .inicio-banner {
+                padding: 40px 15px;
+            }
+
+            .inicio-cuadro {
+                min-height: 220px;
+            }
+
+            .inicio-panel .titulo {
+                font-size: 23px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="logo">
+        <h1>🎱 BILLAR EL TRIUNFO</h1>
+        <p>Oruro - Bolivia</p>
+    </div>
+
+    <nav class="nav">
+        <a href="index.html" class="activo">Inicio</a>
+        <a href="mesas.html">Mesas</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="productos.html">Productos</a>
+        <a href="reservas.html">Reservas</a>
+        <a href="dashboard.html">Dashboard</a>
+    </nav>
+</header>
+
+<section class="inicio-banner">
+    <span class="etiqueta">BIENVENIDO A NUESTRO ESTABLECIMIENTO</span>
+
+    <h1>BILLAR EL TRIUNFO</h1>
+
+    <p>Donde cada partida se convierte en una victoria.</p>
+    <p>Administración moderna, diversión y buen servicio.</p>
+
+    <a href="mesas.html" class="btn">🎱 Administrar mesas</a>
+    <a href="dashboard.html" class="btn">📊 Ver estadísticas</a>
+</section>
+
+<main class="inicio-panel">
+
+    <h2 class="titulo">PANEL DE ADMINISTRACIÓN</h2>
+
+    <p class="inicio-descripcion">
+        Gestiona todos los servicios de nuestro establecimiento.
+    </p>
+
+    <div class="inicio-grid">
+
+        <div class="inicio-cuadro">
+            <span class="inicio-icono">🎱</span>
+            <h3>Administración de mesas</h3>
+            <p>Controla las 10 mesas, partidas, tiempos y cobros.</p>
+            <a href="mesas.html" class="btn">INGRESAR</a>
+        </div>
+
+        <div class="inicio-cuadro">
+            <span class="inicio-icono">👥</span>
+            <h3>Administración de clientes</h3>
+            <p>Registra y administra los datos de tus clientes.</p>
+            <a href="clientes.html" class="btn">INGRESAR</a>
+        </div>
+
+        <div class="inicio-cuadro">
+            <span class="inicio-icono">🥤</span>
+            <h3>Administración de productos</h3>
+            <p>Controla bebidas, alimentos, precios y existencias.</p>
+            <a href="productos.html" class="btn">INGRESAR</a>
+        </div>
+
+        <div class="inicio-cuadro">
+            <span class="inicio-icono">📅</span>
+            <h3>Administración de reservas</h3>
+            <p>Organiza las reservas de mesas y horarios.</p>
+            <a href="reservas.html" class="btn">INGRESAR</a>
+        </div>
+
+        <div class="inicio-cuadro">
+            <span class="inicio-icono">📊</span>
+            <h3>Dashboard estadístico</h3>
+            <p>Consulta ingresos, ventas y estadísticas generales.</p>
+            <a href="dashboard.html" class="btn">INGRESAR</a>
+        </div>
+
+        <div class="inicio-cuadro">
+            <span class="inicio-icono">🏆</span>
+            <h3>Sobre nosotros</h3>
+            <p>Un espacio para disfrutar, compartir y competir.</p>
+            <a href="#informacion" class="btn">CONOCER MÁS</a>
+        </div>
+
+    </div>
+
+    <section class="inicio-informacion" id="informacion">
+        <h2>INFORMACIÓN DEL ESTABLECIMIENTO</h2>
+
+        <p><strong>Nombre:</strong> BILLAR EL TRIUNFO</p>
+        <p><strong>Actividad:</strong> Alquiler de mesas y venta de productos.</p>
+        <p><strong>Ubicación:</strong> Oruro - Bolivia.</p>
+        <p><strong>Cantidad de mesas:</strong> 10 mesas.</p>
+        <p><strong>Tarifa:</strong> Bs 15 por hora.</p>
+        <p><strong>Servicios:</strong> Alquiler, reservas, bebidas y alimentos.</p>
+    </section>
+
+    <section class="inicio-despedida">
+        <h2>¡GRACIAS POR VISITAR BILLAR EL TRIUNFO!</h2>
+        <p>Calidad, entretenimiento y excelente atención.</p>
+        <a href="mesas.html" class="btn">COMENZAR ADMINISTRACIÓN</a>
+    </section>
+
+</main>
+
+<footer class="inicio-footer">
+    <h3>🎱 BILLAR EL TRIUNFO</h3>
+    <p>Sistema de administración de billar</p>
+    <p>Oruro - Bolivia</p>
+    <p>© 2026 Todos los derechos reservados.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

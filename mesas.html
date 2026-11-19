@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes | Billar El Triunfo</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">
+        <h1>🎱 BILLAR EL TRIUNFO</h1>
+        <p>Oruro - Bolivia</p>
+    </div>
+    <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="mesas.html">Mesas</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="productos.html">Productos</a>
+        <a href="reservas.html">Reservas</a>
+        <a href="dashboard.html">Dashboard</a>
+    </nav>
+</header>
+
+<main class="contenedor">
+    <section class="banner">
+        <h2>GESTIÓN DE CLIENTES</h2>
+        <p>Administración de clientes del Billar El Triunfo</p>
+    </section>
+
+    <section class="card">
+        <h2>Registrar nuevo cliente</h2>
+
+        <form id="form-cliente">
+            <div class="form-grid">
+                <div>
+                    <label>Nombre completo</label>
+                    <input type="text" id="nombre" required>
+                </div>
+
+                <div>
+                    <label>Teléfono</label>
+                    <input type="tel" id="telefono" required>
+                </div>
+
+                <div>
+                    <label>Correo electrónico</label>
+                    <input type="email" id="correo">
+                </div>
+            </div>
+
+            <button type="submit" class="btn">Registrar cliente</button>
+        </form>
+    </section>
+
+    <section class="card">
+        <h2>Lista de clientes</h2>
+
+        <input type="search" id="buscar-cliente" placeholder="Buscar por nombre o teléfono...">
+
+        <div class="tabla-contenedor">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Teléfono</th>
+                        <th>Correo</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-clientes"></tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>© 2026 BILLAR EL TRIUNFO | Oruro - Bolivia</p>
+</footer>
+
+<script src="app.js"></script>
+<script src="mesas.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos | Billar El Triunfo</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="logo">
+        <h1>🎱 BILLAR EL TRIUNFO</h1>
+        <p>Oruro - Bolivia</p>
+    </div>
+
+    <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="mesas.html">Mesas</a>
+        <a href="clientes.html">Clientes</a>
+        <a href="productos.html">Productos</a>
+        <a href="reservas.html">Reservas</a>
+        <a href="dashboard.html">Dashboard</a>
+    </nav>
+</header>
+
+<main class="contenedor">
+
+    <section class="banner">
+        <h2>GESTIÓN DE PRODUCTOS</h2>
+        <p>Control de inventario y ventas del Billar El Triunfo</p>
+    </section>
+
+    <section class="kpi-grid">
+        <div class="kpi">
+            <h3>Total productos</h3>
+            <p id="total-productos">0</p>
+        </div>
+
+        <div class="kpi">
+            <h3>Unidades disponibles</h3>
+            <p id="total-stock">0</p>
+        </div>
+
+        <div class="kpi">
+            <h3>Productos agotados</h3>
+            <p id="productos-agotados">0</p>
+        </div>
+    </section>
+
+    <section class="card">
+        <h2>Registrar producto</h2>
+
+        <form id="form-producto">
+            <div class="form-grid">
+                <div>
+                    <label>Nombre del producto</label>
+                    <input type="text" id="nombre-producto" required>
+                </div>
+
+                <div>
+                    <label>Categoría</label>
+                    <select id="categoria-producto" required>
+                        <option value="">Seleccionar categoría</option>
+                        <option value="Bebidas">Bebidas</option>
+                        <option value="Snacks">Snacks</option>
+                        <option value="Alimentos">Alimentos</option>
+                        <option value="Otros">Otros</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>Precio (Bs)</label>
+                    <input type="number" id="precio-producto" min="0.01" step="0.01" required>
+                </div>
+
+                <div>
+                    <label>Stock inicial</label>
+                    <input type="number" id="stock-producto" min="0" step="1" required>
+                </div>
+            </div>
+
+            <button type="submit" class="btn">Registrar producto</button>
+        </form>
+    </section>
+
+    <section class="card">
+        <h2>Inventario de productos</h2>
+
+        <input type="search" id="buscar-producto" placeholder="Buscar producto...">
+
+        <div class="tabla-contenedor">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Producto</th>
+                        <th>Categoría</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-productos"></tbody>
+            </table>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <p>© 2026 BILLAR EL TRIUNFO | Oruro - Bolivia</p>
+</footer>
+<script src="app.js"></script>
+<script src="productos.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+{
+    "establecimiento": {
+        "nombre": "BILLAR EL TRIUNFO",
+        "actividad": "Alquiler de mesas de billar y venta de productos",
+        "ubicacion": "Oruro - Bolivia",
+        "cantidadMesas": 10,
+        "tarifaPorHora": 15,
+        "moneda": "Bs"
+    },
+    "mesas": [
+        {
+            "numero": 1,
+            "estado": "Disponible",
+            "horaInicio": null,
+            "cliente": null
+        },
+        {
+            "numero": 2,
+            "estado": "Disponible",
+            "horaInicio": null,
+            "cliente": null
+        },
+        {
+            "numero": 3,
+            "estado": "Disponible",
+            "horaInicio": null,
+            "cliente": null
+        },
+        {
+            "numero": 4,
+            "estado": "Disponible",
+            "horaInicio": null,
+            "cliente": null
+        },
+        {
+            "numero": 5,
+            "estado": "Disponible",
+            "horaInicio": null,
+            "cliente": null
+        },
+        {
+            "numero": 6,
+            "estado": "Disponible",
+            "horaInicio": null,
+            "cliente": null
+        },
+        {
+            "numero": 7,
+            "estado": "Disponible",
+            "horaInicio": null,
+            "cliente": null
+        },
+        {
+            "numero": 8,
+            "estado": "Disponible",
+            "horaInicio": null,
+            "cliente": null
+        },
+        {
+            "numero": 9,
+            "estado": "Disponible",
+            "horaInicio": null,
+            "cliente": null
+        },
+        {
+            "numero": 10,
+            "estado": "Disponible",
+            "horaInicio": null,
+            "cliente": null
+        }
+    ],
+    "clientes": [
+        {
+            "id": 1,
+            "nombre": "Juan Pérez",
+            "telefono": "70000001",
+            "correo": "juan@gmail.com"
+        },
+        {
+            "id": 2,
+            "nombre": "Carlos Flores",
+            "telefono": "70000002",
+            "correo": "carlos@gmail.com"
+        },
+        {
+            "id": 3,
+            "nombre": "Miguel López",
+            "telefono": "70000003",
+            "correo": "miguel@gmail.com"
+        }
+    ],
+    "productos": [
+        {
+            "id": 1,
+            "nombre": "Coca Cola",
+            "categoria": "Bebidas",
+            "precio": 8,
+            "stock": 30
+        },
+        {
+            "id": 2,
+            "nombre": "Agua",
+            "categoria": "Bebidas",
+            "precio": 5,
+            "stock": 25
+        },
+        {
+            "id": 3,
+            "nombre": "Galletas",
+            "categoria": "Snacks",
+            "precio": 4,
+            "stock": 20
+        },
+        {
+            "id": 4,
+            "nombre": "Papas fritas",
+            "categoria": "Snacks",
+            "precio": 7,
+            "stock": 15
+        },
+        {
+            "id": 5,
+            "nombre": "Jugo",
+            "categoria": "Bebidas",
+            "precio": 6,
+            "stock": 20
+        },
+        {
+            "id": 6,
+            "nombre": "Sandwich",
+            "categoria": "Alimentos",
+            "precio": 12,
+            "stock": 10
+        }
+    ],
+    "reservas": [],
+    "ventas": [],
+    "historialMesas": []
+}
